@@ -1,5 +1,5 @@
 # Cinema 182
-Old Finals project from 2019 - Seat Booking feature is unfinished.
+Old Finals project from 2019
 
 Made with Java + PHP My Admin/SQL
 
