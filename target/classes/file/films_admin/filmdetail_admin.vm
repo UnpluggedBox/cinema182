@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Font -->
+	<link rel="stylesheet" href="/login/fonts/iconic/css/material-design-iconic-font.min.css" type="text/css">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="/homepage/css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" href="/homepage/css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="/homepage/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="/homepage/css/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" href="/homepage/css/nouislider.min.css">
+	<link rel="stylesheet" href="/homepage/css/ionicons.min.css">
+	<link rel="stylesheet" href="/homepage/css/plyr.css">
+	<link rel="stylesheet" href="/homepage/css/photoswipe.css">
+	<link rel="stylesheet" href="/homepage/css/default-skin.css">
+	<link rel="stylesheet" href="/homepage/css/main.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+	<meta name="author" content="Rubin Salim">
+	<title>Cinema 182</title>
+
+</head>
+<body class="body">
+
+<!-- header -->
+<header class="header">
+	<div class="header__wrap">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="header__content">
+
+						<!-- header logo -->
+						<a href="$WebPath.getHOME_PAGE_ADMIN()" class="header__logo">
+							<img src="/homepage/images/logo-cinema182.png" width="180" height="140" alt="CINEMA 182">
+						</a>
+						<!-- end header logo -->
+
+						<!-- header nav -->
+						<ul class="header__nav">
+							<!-- dropdown -->
+							<li class="header__nav-item">
+								<a class="header__nav-link" href="$WebPath.getHOME_PAGE_ADMIN()" role="button" >Home</a>
+							</li>
+							<!-- end dropdown -->
+
+							<!-- dropdown -->
+							<li class="header__nav-item">
+								<a href="$WebPath.getINSERT_FILM_PAGE()" class="header__nav-link">Insert New Films</a>
+							</li>
+							<!-- end dropdown -->
+
+
+						</ul>
+						<!-- end header nav -->
+
+						<!-- header auth -->
+						<div class="header__auth">
+							<a href="$WebPath.getHOME_PAGE_ADMIN()" class="header__sign-in">
+								<i class="icon ion-ios-log-in"></i>
+								<span id="fnameuser"></span>
+							</a>
+							<a href="$WebPath.getHOME_PAGE()" class="header__sign-in">
+								<i class="icon ion-ios-log-in"></i>
+								<span>logout</span>
+							</a>
+						</div>
+
+						<!-- end header auth -->
+
+						<!-- header menu btn -->
+						<button class="header__btn" type="button">
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
+						<!-- end header menu btn -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</header>
+<!-- end header -->
+
+	<!-- details -->
+	<section class="section details">
+		<!-- details background -->
+		<div class="details__bg" data-bg="/films/JOHN3.jpg"></div>
+		<!-- end details background -->
+
+
+		<!-- details content -->
+		<div class="container">
+			<div class="row">
+				<!-- title -->
+				<div class="col-12">
+					<h1 class="details__title" id="filmTitle"></h1>
+				</div>
+				<!-- end title -->
+
+				<!-- content -->
+				<div class="col-12 col-xl-6">
+					<div class="card card--details">
+						<div class="row">
+							<!-- card cover -->
+							<div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-5">
+								<div class="card__cover">
+									<img class ="filmImage" src = "$film.getFilmimageloc()" width="320" height="320">
+								</div>
+							</div>
+							<!-- end card cover -->
+
+							<!-- card content -->
+							<div class="col-12 col-sm-8 col-md-8 col-lg-9 col-xl-7">
+								<div class="card__content">
+
+									<ul class="card__meta">
+										<li id="releasedateformat"><span></span>$film.getReleasedate()</li>
+										<li><span>Running time:</span> $film.getDuration() minutes</li>
+										<li></li>
+									</ul>
+
+									<div class="card__description card__description--details">
+											$film.getDescription()
+									</div>
+
+									<div class="w3-container">
+											<a href="$WebPath.getHOME_PAGE()film_details_admin/$film.getFilmid()/edit/">
+											<button class="form__btn" type="submit" style="float: left; height: 35px; width: 55px" value="$film.getFilm()">Edit</button>
+											</a>
+
+										<button onclick="document.getElementById('deleteModal$film.getFilmid()').style.display='block'" class="form__btn" type="submit" style="margin-left: 5px; float: left; height: 35px; width: 75px">Delete</button>
+													<div class="w3-modal" id="deleteModal$film.getFilmid()" tabindex="-1" role="dialog">
+														<div class="w3-modal-content w3-animate-zoom w3-card-4">
+															<header class="w3-container w3-pink">
+        														<span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+																<h2>Delete Film?</h2>
+															</header>
+															<div class="w3-container">
+																<span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+																<p></p>
+																<p>Are you sure you want to delete $film.getTitle()?</p>
+															</div>
+															<footer class="w3-container w3-pink">
+																<button style="float: left" type="button" class="w3-btn w3-display-bottomleft" data-dismiss="modal" onclick="document.getElementById('deleteModal$film.getFilmid()').style.display='none'">
+																	<i data-feather="x"></i> Cancel
+																</button>
+																<form method="post"
+																	  action="$WebPath.getHOME_PAGE()film_details_admin/$film.getFilmid()/delete/">
+																	<button type="submit" class="w3-btn" style="margin-left: 70px" value="$film.getFilmid()" name="filmid">
+																		Delete
+																	</button>
+																</form>
+															</footer>
+														</div>
+													</div>
+
+									</div>
+								</div>
+							</div>
+							<!-- end card content -->
+						</div>
+					</div>
+				</div>
+				<!-- end content -->
+
+				<!-- trailer -->
+				<div class="col-12 col-xl-6">
+					<iframe style="border:none; float: right; width:560px; height:400px"
+							src="$film.getTrailerurl()">
+					</iframe>
+				</div>
+				<!-- trailer -->
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end details content -->
+	</section>
+	<!-- end details -->
+
+	<!-- content -->
+	<section class="content">
+		<div class="content__head">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<h2 class="content__title">Other Movies in our Cinema</h2>
+					</div>
+					#foreach($film in $filmList)
+						<div>
+							<a href="$WebPath.getHOME_PAGE()film_details_admin/$film.getFilmid()/view/">
+								<button style="padding-left: 20px; padding-bottom: 10px; margin: 5px" type ="submit" name="buttonFilm" value="$film.getFilm()">
+									<img class ="filmImage"src = "$film.getFilmimageloc()" width="240" height="320">
+								</button>
+							</a>
+						</div>
+
+					#end
+				</div>
+			</div>
+		</div>
+
+	<!-- end content -->
+
+	<!-- footer -->
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<!-- footer list -->
+				<div class="col-12 col-md-3">
+					<h6 class="footer__title">Download Cinema 182 App</h6>
+					<ul class="footer__app">
+						<li><a href="http://fti.untar.ac.id/"><img src="/homepage/images/FTILOGO.png" width="240" alt="Fakultas Teknologi Informasi Universitas Tarumanagara"></a></li>
+					</ul>
+				</div>
+				<!-- end footer list -->
+
+				<!-- footer list -->
+				<div class="col-6 col-sm-4 col-md-3">
+					<h6 class="footer__title">Resources</h6>
+					<ul class="footer__list">
+						<li><a href="http://fti.untar.ac.id/">About Us</a></li>
+						<li><a href="mailto:rubin.535180123@stu.untar.ac.id">Help</a></li>
+					</ul>
+				</div>
+				<!-- end footer list -->
+
+
+				<!-- footer list -->
+				<div class="col-12 col-sm-4 col-md-3">
+					<h6 class="footer__title">Contact</h6>
+					<ul class="footer__list">
+						<li><a href="tel:+62215676260">+62 21 5676260</a></li>
+						<li><a href="mailto:rubin.535180123@stu.untar.ac.id">rubin.535180123@stu.untar.ac.id</a></li>
+						<li><a href="https://www.google.com/maps/dir//Tarumanagara+University+Campus+1,+Letjen+S.+Parman+St+No.1,+RT.6%2FRW.16,+Tomang,+Grogol+petamburan,+West+Jakarta+City,+Jakarta+11440/@-6.1694228,106.7857374,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x2e69f65c8572640d:0xc0a066d78372614e!2m2!1d106.7891017!2d-6.1694025">Gedung R Universitas Tarumanagara Lantai 7</a></li>
+					</ul>
+				</div>
+				<!-- end footer list -->
+
+			</div>
+		</div>
+	</footer>
+	<!-- end footer -->
+
+	<script>
+			var d =new Date("$film.getReleasedate()");
+			var dt=d.getDate();
+			var mn=d.getMonth();
+			if (mn == "01") {
+				mn = "January";
+			} else if (mn == "02") {
+				mn = "February";
+			} else if (mn == "03") {
+				mn = "March";
+			} else if (mn == "04") {
+				mn = "April";
+			} else if (mn == "05") {
+				mn = "May";
+			} else if (mn == "06") {
+				mn = "June";
+			} else if (mn == "07") {
+				mn = "July";
+			} else if (mn == "08") {
+				mn = "August";
+			} else if (mn == "09") {
+				mn = "September";
+			} else if (mn == "10") {
+				mn = "October";
+			} else if (mn == "11") {
+				mn = "November";
+			} else {
+				mn = "December";
+			}
+			var yy=d.getFullYear();
+			document.getElementById("releasedateformat").innerHTML ="Release Date: " + dt + "  " + mn + "  " + yy;
+
+
+		var title = "$film.getTitle()";
+		document.getElementById("filmTitle").innerHTML = title;
+
+		var fname = "$fnameLogin";
+		document.getElementById("fnameuser").innerHTML = fname;
+	</script>
+
+	</section>
+</body>
+
+</html>

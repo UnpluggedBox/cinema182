@@ -1,0 +1,210 @@
+<!-- Logo dibuat di freelogodesign.org -->
+<!-- Template yg telah dimodifikasi dari templateshub.net oleh Dmitry Volkov-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Font -->
+    <link rel="stylesheet" href="/login/fonts/iconic/css/material-design-iconic-font.min.css" type="text/css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/homepage/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="/homepage/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="/homepage/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/homepage/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="/homepage/css/nouislider.min.css">
+    <link rel="stylesheet" href="/homepage/css/ionicons.min.css">
+    <link rel="stylesheet" href="/homepage/css/plyr.css">
+    <link rel="stylesheet" href="/homepage/css/photoswipe.css">
+    <link rel="stylesheet" href="/homepage/css/default-skin.css">
+    <link rel="stylesheet" href="/homepage/css/main.css">
+
+
+    <meta name="author" content="Rubin Salim">
+    <title>Cinema 182</title>
+
+</head>
+<body class="body">
+
+<!-- header -->
+<header class="header">
+    <div class="header__wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="header__content">
+
+                        <!-- header logo -->
+                        <a href="$WebPath.getHOME_PAGE_ADMIN()" class="header__logo">
+                            <img src="/homepage/images/logo-cinema182.png" width="180" height="140" alt="CINEMA 182">
+                        </a>
+                        <!-- end header logo -->
+
+                        <!-- header nav -->
+                        <ul class="header__nav">
+
+                            <li class="header__nav-item">
+                                <a class="header__nav-link" href="$WebPath.getHOME_PAGE_ADMIN()" role="button" >Home</a>
+                            </li>
+
+                            <li class="header__nav-item">
+                                <a href="$WebPath.getINSERT_FILM_PAGE()" class="header__nav-link">Insert New Films</a>
+                            </li>
+
+
+                        </ul>
+                        <!-- end header nav -->
+
+                        <!-- header auth -->
+                        <div class="header__auth">
+                            <a href="#" class="header__sign-in">
+                                <i class="icon ion-ios-log-in"></i>
+                                <span id="fnameuser"></span>
+                            </a>
+
+
+                            <a href="$WebPath.getHOME_PAGE()" class="header__sign-in">
+                                <i class="icon ion-ios-log-in"></i>
+                                <span>logout</span>
+                            </a>
+                        </div>
+                        <!-- end header auth -->
+
+                        <!-- header menu btn -->
+                        <button class="header__btn" type="button">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <!-- end header menu btn -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+<!-- end header -->
+
+<!-- home -->
+<section class="home">
+
+    <div class="container" style="padding-left: 300px">
+        <div class="row">
+            <div class="col-12">
+                <div class="container">
+                    <!-- content tabs -->
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="1-tab">
+                            <div class="row">
+                                <!-- card -->
+                                <form method="post" class="sign__form">
+                                    <a href="$WebPath.getHOME_PAGE_ADMIN()" class="sign__logo">
+                                        <h1 class="home__title"><b>Insert</b>    Films Here</h1>
+                                    </a>
+                                    <input type = "hidden" name="id"
+                                           value = "$film.getFilmid()">
+
+                                    <div class="sign__group">
+                                        <input type="text" class="sign__input" name = "title" value = "$film.getTitle()"
+                                               required autofocus placeholder="Film Title">
+                                    </div>
+
+                                    <div class="sign__group">
+                                        <input type="text" class="sign__input" name = "description"
+                                               value = "$film.getDescription()" placeholder="Description">
+                                    </div>
+
+                                    <div class="sign__group">
+                                        <input type="text" class="sign__input" name = "duration"
+                                               value = "$film.getDuration()" placeholder="Duration">
+                                    </div>
+
+                                    <div class="sign__group">
+                                        <input type="date" class="sign__input" name="releasedate"
+                                               value="$film.getReleasedate()" placeholder="Release Date">
+                                    </div>
+
+                                    <div class="sign__group">
+                                        <input type="text" class="sign__input" name="filmimageloc"
+                                               value="$film.getFilmimageloc()" placeholder="Film Poster Location">
+                                    </div>
+
+                                    <div class="sign__group">
+                                        <input type="text" class="sign__input" name="trailerurl"
+                                               value="$film.getTrailerurl()" placeholder="Trailer URL">
+                                    </div>
+
+
+                                    <button class="sign__btn" type="submit">Update</button>
+
+                                </form>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end card -->
+
+</section>
+<!-- end home -->
+
+<!-- footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <!-- footer list -->
+            <div class="col-12 col-md-3">
+                <h6 class="footer__title">Download Cinema 182 App</h6>
+                <ul class="footer__app">
+                    <li><a href="http://fti.untar.ac.id/"><img src="/homepage/images/FTILOGO.png" width="240" alt="Fakultas Teknologi Informasi Universitas Tarumanagara"></a></li>
+                </ul>
+            </div>
+            <!-- end footer list -->
+
+            <!-- footer list -->
+            <div class="col-6 col-sm-4 col-md-3">
+                <h6 class="footer__title">Resources</h6>
+                <ul class="footer__list">
+                    <li><a href="http://fti.untar.ac.id/">About Us</a></li>
+                    <li><a href="mailto:rubin.535180123@stu.untar.ac.id">Help</a></li>
+                </ul>
+            </div>
+            <!-- end footer list -->
+
+
+            <!-- footer list -->
+            <div class="col-12 col-sm-4 col-md-3">
+                <h6 class="footer__title">Contact</h6>
+                <ul class="footer__list">
+                    <li><a href="tel:+62215676260">+62 21 5676260</a></li>
+                    <li><a href="mailto:rubin.535180123@stu.untar.ac.id">rubin.535180123@stu.untar.ac.id</a></li>
+                    <li><a href="https://www.google.com/maps/dir//Tarumanagara+University+Campus+1,+Letjen+S.+Parman+St+No.1,+RT.6%2FRW.16,+Tomang,+Grogol+petamburan,+West+Jakarta+City,+Jakarta+11440/@-6.1694228,106.7857374,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x2e69f65c8572640d:0xc0a066d78372614e!2m2!1d106.7891017!2d-6.1694025">Gedung R Universitas Tarumanagara Lantai 7</a></li>
+                </ul>
+            </div>
+            <!-- end footer list -->
+
+        </div>
+    </div>
+</footer>
+<!-- end footer -->
+
+<!-- JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/feather-icons"></script>
+<script>feather.replace()</script>
+<script>
+    var fnamespan = "$fnameLogin";
+    document.getElementById("fnameuser").innerHTML = fnamespan;
+</script>
+</body>
+
+</html>

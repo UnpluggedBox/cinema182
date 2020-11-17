@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5bd79955-1869-4c03-8915-4e4b3a086bfd" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1UCzPTN5cYn4DorO6TA5YQcYkR2" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Rubin Salim\IdeaProjects\CinemaUAS\src\main\resources\stuff" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="model" />
+      <recent name="dao" />
+      <recent name="controllers" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Rubin Salim\IdeaProjects\CinemaUAS" />
+      <recent name="C:\Users\Rubin Salim\IdeaProjects\CinemaUAS\src\main\resources\file\homepage" />
+      <recent name="C:\Users\Rubin Salim\IdeaProjects\CinemaUAS\src\main\resources\file\films_admin" />
+      <recent name="C:\Users\Rubin Salim\IdeaProjects\CinemaUAS\src\main\resources\file\admin_home" />
+      <recent name="C:\Users\Rubin Salim\IdeaProjects\CinemaUAS\src\main\resources\file\films_user" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Application" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Application" />
+      <module name="CinemaUAS" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Application" />
+      <module name="CinemaUAS" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5bd79955-1869-4c03-8915-4e4b3a086bfd" name="Default Changelist" comment="" />
+      <created>1574875340145</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1574875340145</updated>
+      <workItem from="1574875344476" duration="1526000" />
+      <workItem from="1575033328458" duration="4964000" />
+      <workItem from="1575038310985" duration="7000" />
+      <workItem from="1575038360087" duration="2138000" />
+      <workItem from="1575040516721" duration="14017000" />
+      <workItem from="1575055435918" duration="13894000" />
+      <workItem from="1575115702925" duration="5752000" />
+      <workItem from="1575293927207" duration="11287000" />
+      <workItem from="1575307359806" duration="29353000" />
+      <workItem from="1575457092589" duration="16773000" />
+      <workItem from="1575557108373" duration="9837000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
