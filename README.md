@@ -1,5 +1,5 @@
 # Cinema 182
-Old Finals project from 2019
+Finals project from 2019
 
 Made with Java + PHPMyAdmin/MySQL
 
